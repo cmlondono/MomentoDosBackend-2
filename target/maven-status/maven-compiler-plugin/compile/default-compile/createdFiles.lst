@@ -1,0 +1,6 @@
+com\ejemplo\dto_mapstruct\mapper\ProveedorMapper.class
+com\ejemplo\dto_mapstruct\mapper\ProveedorMapperImpl.class
+com\ejemplo\dto_mapstruct\entity\Proveedor.class
+com\ejemplo\dto_mapstruct\dto\ProveedorDTO.class
+com\ejemplo\dto_mapstruct\repository\ProveedorRepository.class
+com\ejemplo\dto_mapstruct\controller\ProveedorController.class

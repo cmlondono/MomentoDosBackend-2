@@ -1,0 +1,28 @@
+proveedor
+  - id       : identificador automático.
+  - nombre   : nombre del proveedor.
+  - telefono : teléfono de contacto.
+  - correo   : correo electrónico.
+
+
+
+funcionamiento
+Recorrido: Controller -> DTO -> Mapper -> Entity -> Repository -> Base de datos
+
+  1. Controller: ProveedorController recibe la petición HTTP
+     (POST /api/proveedores) con el JSON del proveedor.
+  2. DTO: Spring convierte ese JSON en un objeto ProveedorDTO,
+     que define los datos que entran y salen de la API.
+  3. Mapper: ProveedorMapper (MapStruct) transforma el
+     ProveedorDTO en la entidad Proveedor (toEntity).
+  4. Entity: Proveedor representa la tabla "proveedores"
+     de la base de datos.
+  5. Repository: ProveedorRepository (JpaRepository) guarda
+     la entidad con save().
+  6. Base de datos: H2 almacena el registro y genera el id.
+
+  De regreso, el Mapper convierte la entidad guardada en DTO
+  (toDTO) y el Controller la devuelve como JSON.
+  En el GET, el Repository consulta todos con findAll() y el
+  Mapper convierte cada entidad a DTO.
+
